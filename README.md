@@ -14,6 +14,10 @@ This simulation generalizes the problem to a scenario with any number of ants. T
 
 In the simulation, the sizes are scaled up. The side length of the polygon is 3600 pixels, based on a formulation of the puzzle involving a 1 meter by 1 meter square and ants walking at a speed of 1 meter per hour.
 
+## Usage
+
+The simulation accepts command line parameters. Run `python ants.py -h` to obtain a help message with the available flags.
+
 ## Other simulations
 
 See also [this GeoGebra simulation](https://www.geogebra.org/m/yVrQTEFK) of the Four Ants Problem.

@@ -15,9 +15,9 @@
 import argparse
 
 parser = argparse.ArgumentParser("Four Ant Problem simulation, generalized to any number of ants.")
-parser.add_argument("--ants", "-a", nargs=1, default=4, type=int, help="Number of ants", dest="ants")
+parser.add_argument("--ants", "-a", nargs=1, default=[4], type=int, help="Number of ants", dest="ants")
 parser.add_argument("-o", "--output", nargs=1, help="Output file", dest="output")
-parser.add_argument("-t", "--duration", nargs=1, default=3550, type=int, help="Number of seconds to simulate", dest="tf")
+parser.add_argument("-t", "--duration", nargs=1, default=[3550], type=int, help="Number of seconds to simulate", dest="tf")
 
 args = parser.parse_args()
 ants = args.ants[0]
@@ -35,6 +35,8 @@ import matplotlib.pyplot as plt
 
 from ode_solvers import implicit_mid_point
 import math
+
+def normalize(v):
 	return v/norm(v)
 
 def velocity(t, q):
